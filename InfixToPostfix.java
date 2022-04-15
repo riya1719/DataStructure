@@ -45,14 +45,16 @@ class InfixToPostfix
 			}
 			else 
 			{
-				while (!stack.isEmpty() && Prec(c) <= Prec(stack.peek())){
+				while (!stack.isEmpty() && Prec(c) <= Prec(stack.peek()))
+				{
 				
 					result += stack.pop();
 			}
 				stack.push(c);
 				}
 		}
-		while (!stack.isEmpty()){
+		while (!stack.isEmpty())
+		{
 			if(stack.peek() == '(')
 				return "Invalid Expression";
 			result += stack.pop();
